@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Нёрдс</title>
+  </head>
+
+  <body>
+
+    <header class="main-header">
+
+      <div class="container"> <!--центровщик-->
+
+        <nav class="main-nav">
+          <a href="index.html" class="header-logo">Nёrds</a>
+
+          <ul>
+            <li><a href="index.html#about-us">Студия</a></li>
+            <li><a href="index.html#our-customers">Клиенты</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+
+          <ul>
+            <li><a href="shopping-cart.html">Корзина</a></li>
+          </ul>
+
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">Дополнительная информация о дизайн-студии "Nerds"</h1>
+
+      <div>
+        <div class="container"><!--центровщик-->
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure nesciunt quis nam ut unde velit porro natus necessitatibus dolorem. Nesciunt, placeat asperiores. Ipsam repellat debitis quae nostrum doloribus veniam odio.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quia hic consequuntur blanditiis? Magni cumque veniam placeat doloremque fugiat at rem, illum sed debitis consectetur, tempore quod accusamus, nesciunt error.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum doloribus exercitationem modi vitae maiores, error expedita. Praesentium, perferendis! Voluptatem, ipsum! Aliquam itaque vitae asperiores cumque, voluptate perferendis perspiciatis facere nostrum!</p>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="main-footer">
+
+      <section class="contacts">
+        <a id="contacts"></a>
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056334!2d30.3208533511878!3d59.93871916896586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1611152443362!5m2!1sru!2sru" width="1440" height="416" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+        <div><!--блок c position:absolute для iframe-->
+          <p>Nёrds design studio</p>
+          <address>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
+          <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+          <button type="button">Напишите нам</button>
+        </div>
+      </section>
+
+      <div class="container">
+
+        <section>
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul>
+            <li><a href="https://vk.com/">ВКонтакте</a></li>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.instagram.com/?hl=ru">Instagram</a></li>
+          </ul>
+        </section>
+
+        <div>
+          <p>Давайте дружить, это выгодно!</p>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </div>
+    </footer>
+
+    <section class="write-us">
+      <h2>Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="login-login">Ваше имя:</label>
+          <input id="login-login" type="text" name="login" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="email">Ваш email:</label>
+          <input id="login-email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="login-message">Текст письма:</label>
+        </p>
+        <p>
+          <textarea name="login-message" id="login-message" cols="30" rows="10">В свободной форме</textarea>
+        <p>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
+  </body>
+</html>
