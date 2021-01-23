@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Нёрдс</title>
+  </head>
+
+  <body>
+
+    <header class="main-header">
+
+      <div class="container"> <!--центровщик-->
+
+        <nav class="main-nav">
+          <a href="index.html" class="header-logo">Nёrds</a>
+
+          <ul>
+            <li><a href="index.html#about-us">Студия</a></li>
+            <li><a href="index.html#our-customers">Клиенты</a></li>
+            <li><a>Магазин</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+
+          <ul>
+            <li><a href="shopping-cart.html">Корзина</a></li>
+          </ul>
+
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <div>
+        <div class="container"><!--центровщик-->
+          <p>Магазин готовых шаблонов</p>
+        </div>
+      </div>
+
+      <h1 class="visually-hidden">Каталог товаров</h1>
+
+      <section>
+        <form action="https://echo.htmlacademy.ru" method="post">
+
+          <h2 class="visually-hidden">Фильтр товаров</h2>
+
+          <fieldset>
+            <legend>Стоимость</legend>
+          </fieldset>
+
+          <fieldset>
+            <legend>Сетка</legend>
+            <ul>
+              <li>
+                <label for="filter-adaptive">Адаптивная</label>
+                <input type="radio" checked id="filter-adaptive" name="grid" value="adaptive">
+              </li>
+
+              <li>
+                <label for="filter-fixed">Фиксированная</label>
+                <input type="radio" id="filter-fixed" name="grid" value="fixed">
+              </li>
+
+              <li>
+                <label for="filter-rubber">Резиновая</label>
+                <input type="radio" id="filter-rubber" name="grid" value="rubber">
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Особенности</legend>
+            <ul>
+              <li>
+                <label for="filter-slaider">Слайдер</label>
+                <input type="checkbox" checked id="filter-slaider" name="slaider">
+              </li>
+
+              <li>
+                <label for="filter-advantages">Блок преимуществ</label>
+                <input type="checkbox" id="filter-advantages" name="advantages">
+              </li>
+
+              <li>
+                <label for="filter-news">Новости</label>
+                <input type="checkbox" checked id="filter-news" name="news">
+              </li>
+
+              <li>
+                <label for="filter-gallery">Галерея</label>
+                <input type="checkbox" id="filter-gallery" name="gallery">
+              </li>
+
+              <li>
+                <label for="filter-shopping-cart">Корзина</label>
+                <input type="checkbox" id="filter-shopping-cart" name="shopping-cart">
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+
+        <div>
+          <h2 class="visually_hidden">Сортировка:</h2>
+          <ul>
+            <li>По цене</li>
+            <li>По типу</li>
+            <li>По функционалу</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <section>
+        <h2 class="visually-hidden">Список товаров</h2>
+        
+        <ul>
+          <li>
+            <img src="https://via.placeholder.com/358x578" alt="Sedona - Информационный сайт для туристов">
+            <div class="visually-hidden"><!--Блок будет появляться при наведении-->
+              <a href=""><h3>Sedona</h3></a><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
+              <p>Информационный сайт для туристов</p>
+              <button type="button">9900 <span>&#8381;</span></button><!--Кнопка ч\з JS помещает товар в корзину-->
+            </div>
+            <li>
+
+          <li>
+            <img src="https://via.placeholder.com/358x578" alt="Pink App - Продуктовый лендинг приложения для iOS и Android">
+            <div class="visually-hidden"><!--Блок будет появляться при наведении-->
+              <a href=""><h3>Pink App</h3></a><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
+              <p>Продуктовый лендинг приложения для iOS и Android</p>
+              <button type="button">9900 <span>&#8381;</span></button><!--Кнопка ч\з JS помещает товар в корзину-->
+            </div>
+          </li>
+
+          <li>
+            <img src="https://via.placeholder.com/358x578" alt="Barbershop - Сайт салона красоты. Для мужчин, да.">
+            <div class="visually-hidden"><!--Блок будет появляться при наведении-->
+              <a href=""><h3>Barbershop</h3></a><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
+              <p>Сайт салона красоты. Для мужчин, да.</p>
+              <button type="button">9900 <span>&#8381;</span></button><!--Кнопка ч\з JS помещает товар в корзину-->
+            </div>
+          </li>
+
+          <li>
+            <img src="https://via.placeholder.com/358x578" alt="MISHKA - Интернет-магазин вязаных игрушек">
+            <div class="visually-hidden"><!--Блок будет появляться при наведении-->
+              <a href=""><h3>MISHKA</h3></a><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
+              <p>Интернет-магазин вязаных игрушек</p>
+              <button type="button">9900 <span>&#8381;</span></button><!--Кнопка ч\з JS помещает товар в корзину-->
+            </div>
+          </li>
+
+          <li>
+            <img src="https://via.placeholder.com/358x578" alt="A Plus - Лендинг курсов повышения квалификации">
+            <div class="visually-hidden"><!--Блок будет появляться при наведении-->
+              <a href=""><h3>A Plus</h3></a><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
+              <p>Лендинг курсов повышения квалификации</p>
+              <button type="button">9900 <span>&#8381;</span></button><!--Кнопка ч\з JS помещает товар в корзину-->
+            </div>
+          </li>
+
+          <li>
+            <img src="https://via.placeholder.com/358x578" alt="КВАСТ - Промо-сайт производителя крафтового кваса">
+            <div class="visually-hidden"><!--Блок будет появляться при наведении-->
+              <a href=""><h3>КВАСТ</h3></a><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
+              <p>Промо-сайт производителя крафтового кваса</p>
+              <button type="button">9900 <span>&#8381;</span></button><!--Кнопка ч\з JS помещает товар в корзину-->
+            </div></li>
+        </ul>
+
+        <ul>
+          <li>
+            <a>1</a>
+          </li>
+          <li>
+            <a href="">2</a>
+          </li>
+          <li>
+            <a href="">3</a>
+          </li>
+          <li>
+            <a href="">Следующая</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+
+      <section class="contacts" id="contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056334!2d30.3208533511878!3d59.93871916896586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1611152443362!5m2!1sru!2sru" width="1440" height="416" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+        <div><!--блок c position:absolute для iframe-->
+          <p>Nёrds design studio</p>
+          <address>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
+          <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+          <a href="">Напишите нам</a>
+        </div>
+      </section>
+
+      <div class="container">
+
+        <section>
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul>
+            <li><a href="https://vk.com/">ВКонтакте</a></li>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.instagram.com/?hl=ru">Instagram</a></li>
+          </ul>
+        </section>
+
+        <div>
+          <p>Давайте дружить, это выгодно!</p>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </div>
+    </footer>
+
+    <section class="write-us">
+      <h2>Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="login-login">Ваше имя:</label>
+          <input id="login-login" type="text" name="login" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="login-email">Ваш email:</label>
+          <input id="login-email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="login-message">Текст письма:</label>
+        </p>
+        <p>
+          <textarea name="login-message" id="login-message" cols="30" rows="10">В свободной форме</textarea>
+        <p>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
+  </body>
+</html>
