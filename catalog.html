@@ -46,25 +46,32 @@
           <h2 class="visually-hidden">Фильтр товаров</h2>
 
           <fieldset>
-            <legend>Стоимость</legend>
+            <legend>Стоимость:</legend>
+            <label>
+              от<input type="number" name="cost-min" min="1" max="14999" step="1" placeholder="0" value="0">
+            </label>
+
+            <label>
+              до<input type="number" name="cost-max" min="2" max="15000" step="1" placeholder="15 000" value="15000">
+            </label>
           </fieldset>
 
           <fieldset>
             <legend>Сетка</legend>
             <ul>
               <li>
-                <label for="filter-adaptive">Адаптивная</label>
                 <input type="radio" checked id="filter-adaptive" name="grid" value="adaptive">
+                <label for="filter-adaptive">Адаптивная</label>
               </li>
 
               <li>
-                <label for="filter-fixed">Фиксированная</label>
                 <input type="radio" id="filter-fixed" name="grid" value="fixed">
+                <label for="filter-fixed">Фиксированная</label>
               </li>
 
               <li>
-                <label for="filter-rubber">Резиновая</label>
                 <input type="radio" id="filter-rubber" name="grid" value="rubber">
+                <label for="filter-rubber">Резиновая</label>
               </li>
             </ul>
           </fieldset>
@@ -73,100 +80,107 @@
             <legend>Особенности</legend>
             <ul>
               <li>
-                <label for="filter-slaider">Слайдер</label>
                 <input type="checkbox" checked id="filter-slaider" name="slaider">
+                <label for="filter-slaider">Слайдер</label>
               </li>
 
               <li>
-                <label for="filter-advantages">Блок преимуществ</label>
                 <input type="checkbox" id="filter-advantages" name="advantages">
+                <label for="filter-advantages">Блок преимуществ</label>
               </li>
 
               <li>
-                <label for="filter-news">Новости</label>
                 <input type="checkbox" checked id="filter-news" name="news">
+                <label for="filter-news">Новости</label>
               </li>
 
               <li>
-                <label for="filter-gallery">Галерея</label>
                 <input type="checkbox" id="filter-gallery" name="gallery">
+                <label for="filter-gallery">Галерея</label>
               </li>
 
               <li>
-                <label for="filter-shopping-cart">Корзина</label>
                 <input type="checkbox" id="filter-shopping-cart" name="shopping-cart">
+                <label for="filter-shopping-cart">Корзина</label>
               </li>
             </ul>
           </fieldset>
           <button type="submit">Показать</button>
         </form>
+      </section>
 
-        <div>
-          <h2 class="visually_hidden">Сортировка:</h2>
-          <ul>
-            <li>По цене</li>
-            <li>По типу</li>
-            <li>По функционалу</li>
-          </ul>
-        </div>
+      <section>
+        <h2 class="visually_hidden">Сортировка</h2>
+        <p>Сортировать:</p>
 
+        <ul>
+          <li>
+            <a href="">По цене</a>
+         </li>
+          <li>
+            <a href="">По типу</a>
+          </li>
+          <li>
+            <a href="">По названию</a>
+          </li>
+        </ul>
       </section>
 
       <section>
         <h2 class="visually-hidden">Список товаров</h2>
-        
+
         <ul>
           <li>
             <img src="https://via.placeholder.com/358x578" alt="Sedona - Информационный сайт для туристов">
             <div class="visually-hidden"><!--Блок будет появляться при наведении-->
-              <a href=""><h3>Sedona</h3></a><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
+              <h3><a href="">Sedona</a></h3><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
               <p>Информационный сайт для туристов</p>
-              <button type="button">9900 <span>&#8381;</span></button><!--Кнопка ч\з JS помещает товар в корзину-->
+              <a href="">9900 <span>&#8381;</span></a>
             </div>
             <li>
 
           <li>
             <img src="https://via.placeholder.com/358x578" alt="Pink App - Продуктовый лендинг приложения для iOS и Android">
             <div class="visually-hidden"><!--Блок будет появляться при наведении-->
-              <a href=""><h3>Pink App</h3></a><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
+              <h3><a href="">Pink App</a></h3><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
               <p>Продуктовый лендинг приложения для iOS и Android</p>
-              <button type="button">9900 <span>&#8381;</span></button><!--Кнопка ч\з JS помещает товар в корзину-->
+              <a href="">9900 <span>&#8381;</span></a>
             </div>
           </li>
 
           <li>
             <img src="https://via.placeholder.com/358x578" alt="Barbershop - Сайт салона красоты. Для мужчин, да.">
             <div class="visually-hidden"><!--Блок будет появляться при наведении-->
-              <a href=""><h3>Barbershop</h3></a><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
+              <h3><a href="">Barbershop</a></h3><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
               <p>Сайт салона красоты. Для мужчин, да.</p>
-              <button type="button">9900 <span>&#8381;</span></button><!--Кнопка ч\з JS помещает товар в корзину-->
+              <a href="">9900 <span>&#8381;</span></a>
             </div>
           </li>
 
           <li>
             <img src="https://via.placeholder.com/358x578" alt="MISHKA - Интернет-магазин вязаных игрушек">
             <div class="visually-hidden"><!--Блок будет появляться при наведении-->
-              <a href=""><h3>MISHKA</h3></a><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
+              <h3><a href="">MISHKA</a></h3><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
               <p>Интернет-магазин вязаных игрушек</p>
-              <button type="button">9900 <span>&#8381;</span></button><!--Кнопка ч\з JS помещает товар в корзину-->
+              <a href="">9900 <span>&#8381;</span></a>
             </div>
           </li>
 
           <li>
             <img src="https://via.placeholder.com/358x578" alt="A Plus - Лендинг курсов повышения квалификации">
             <div class="visually-hidden"><!--Блок будет появляться при наведении-->
-              <a href=""><h3>A Plus</h3></a><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
+              <h3><a href="">A Plus</a></h3><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
               <p>Лендинг курсов повышения квалификации</p>
-              <button type="button">9900 <span>&#8381;</span></button><!--Кнопка ч\з JS помещает товар в корзину-->
+              <a href="">9900 <span>&#8381;</span></a>
             </div>
           </li>
 
           <li>
             <img src="https://via.placeholder.com/358x578" alt="КВАСТ - Промо-сайт производителя крафтового кваса">
             <div class="visually-hidden"><!--Блок будет появляться при наведении-->
-              <a href=""><h3>КВАСТ</h3></a><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
+              <h3><a href="">КВАСТ</a></h3><!--(https://up.htmlacademy.ru/htmlcss/30/project/nerds#nerds-3-10)-->
               <p>Промо-сайт производителя крафтового кваса</p>
-              <button type="button">9900 <span>&#8381;</span></button><!--Кнопка ч\з JS помещает товар в корзину-->
+              <a href="">9900 <span>&#8381;</span></a>
             </div></li>
         </ul>
 
