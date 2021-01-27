@@ -1,0 +1,11 @@
+.our-customers__item {
+  opacity: 0.2;
+}
+
+.our-customers__item:hover {
+  opacity: 1;
+}
+
+.our-customers__item a:focus {
+  opacity: 0.1;
+}
