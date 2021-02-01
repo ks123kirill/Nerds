@@ -101,6 +101,15 @@ img {
   border: none;
 }
 
+.button_interactive:hover {
+  background-color: var(--special-red);
+}
+
+.button_interactive:focus {
+  background-color: var(--special-red-dark);
+  color: var(--special-capacity-white);
+}
+
 /* main-header */
 
 .main-header {
@@ -159,15 +168,6 @@ img {
   color: var(--basic-white);
 }
 
-.slide__link:hover {
-  background-color: var(--special-red);
-}
-
-.slide__link:focus {
-  background-color: var(--special-red-dark);
-  color: var(--special-capacity-white);
-}
-
 /* services */
 
 .services__list {
@@ -190,33 +190,32 @@ img {
   position: relative;
 }
 
-.item-services_1::before {
+.item-services::before {
   position: absolute;
   width: 300px;
   height: 146px;
   content: "";
   top: 0;
   left: 60%;
-  background-color: var(--basic-red);
 }
 
-.item-services_2::before {
-  position: absolute;
+ .item-services_websites::before {
+  background-color: var(--basic-red);
+  }
+
+  /* Не получается сделать псевдоэлемент блоковым */
+/* .item-services_websites::before {
+  display: block;
   width: 300px;
   height: 146px;
-  content: "";
-  top: 0;
-  left: 60%;
+  background-color: var(--basic-red);
+} */
+
+.item-services_apps::before {
   background-color: var(--basic-green);
 }
 
-.item-services_3::before {
-  position: absolute;
-  width: 300px;
-  height: 146px;
-  content: "";
-  top: 0;
-  left: 60%;
+.item-services_presentations::before {
   background-color: var(--basic-yellow);
 }
 
@@ -224,40 +223,40 @@ img {
   color: var(--basic-white);
 }
 
-.item-services__link_1 {
+.item-services__link_websites {
   background-color: var(--basic-red);
 }
 
-.item-services__link_1:hover {
+.item-services__link_websites:hover {
   background-color: var(--special-red);
 }
 
-.item-services__link_1:focus {
+.item-services__link_websites:focus {
   background-color: var(--special-red-dark);
   color: var(--special-capacity-white);
 }
 
-.item-services__link_2 {
+.item-services__link_apps {
   background-color: var(--basic-green);
 }
-.item-services__link_2:hover {
+.item-services__link_apps:hover {
   background-color: var(--special-green);
 }
 
-.item-services__link_2:focus {
+.item-services__link_apps:focus {
   background-color: var(--special-green-dark);
   color: var(--special-capacity-white);
 }
 
-.item-services__link_3 {
+.item-services__link_presentations {
   background-color: var(--basic-yellow);
 }
 
-.item-services__link_3:hover {
+.item-services__link_presentations:hover {
   background-color: var(--special-yellow);
 }
 
-.item-services__link_3:focus {
+.item-services__link_presentations:focus {
   background-color: var(--special-yellow-dark);
   color: var(--special-capacity-white);
 }
@@ -410,7 +409,7 @@ img {
 
 .field__input:focus,
 .field__input:focus::placeholder {
-  color: var(--basic-black); 
+  color: var(--basic-black);
   border: 1px solid var(--basic-black);
 }
 
