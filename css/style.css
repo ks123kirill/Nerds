@@ -72,6 +72,7 @@
   font-size: 16px;
   line-height: 24px;
   text-align: center;
+  box-sizing: border-box;
   color: var(--basic-black);
   background-color: var(--basic-white);
 
@@ -117,7 +118,6 @@ img {
 
 .container {
   width: 1160px;
-  padding: 0;
   margin: 0 auto;
   outline: 5px dotted rgba(0,0,0,0.3);    /* Рамка для отладки*/
   outline-offset: -5px;                     /* Рамка для отладки*/
@@ -144,7 +144,10 @@ img {
 
 .nav {
   display: grid;
-  grid-template-columns: min-content 1fr min-content;
+  grid-template-columns: 3fr 6fr 3fr;
+  grid-row: 20px;
+  grid-column: 0;
+  padding-top: 50px;
 }
 
 .logo:focus path {
@@ -177,22 +180,17 @@ img {
   outline-offset: -5px;                   /* Рамка для отладки*/
 }
 
-/* main */
-.main {
-  display: grid;
-  grid-template-rows: repeat(4, min-content);
-}
+                          /* main for index.html */
 
 /* slider */
 
 .slider {
   background-color: var(--basic-grey);
-  margin-bottom: 80px;
 }
 
 .slider__list {
   list-style: none;
-  padding: 0;
+  padding: 80px 0;
   margin: 0;
 }
 
@@ -219,17 +217,15 @@ img {
 
 /* services */
 
-.services {
-  margin-bottom: 80px;
-}
-
 .services__list {
   display: grid;
-  grid-template-columns: repeat(3, min-content);
-  gap: 100px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 20px;
   list-style: none;
-  padding: 0;
+  padding: 80px 0;
   margin: 0;
+  border-bottom: 2px solid var(--basic-grey);
 }
 
 .item-services__title {
@@ -246,6 +242,7 @@ img {
 
 .item-services {
   text-align: left;
+  padding-right: 60px;
   outline: 5px solid rgba(0,255,255,0.3); /* Рамка для отладки*/
   outline-offset: -5px;                   /* Рамка для отладки*/
 }
@@ -289,6 +286,7 @@ img {
 .item-services__link_apps {
   background-color: var(--basic-green);
 }
+
 .item-services__link_apps:hover {
   background-color: var(--special-green);
 }
@@ -313,11 +311,14 @@ img {
 
 /* about */
 
+.about {
+  padding-top: 40px;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 8fr 4fr;
   column-gap: 100px;
-  margin-bottom: 70px;
 }
 
 .about__article {
@@ -357,10 +358,9 @@ img {
   color:var(--basic-black-whiten);
 }
 
-.indicators::after {
+.indicators::before {
   content: "";
   display: block;
-  width: 360px;
   height: 208px;
   order: 1;
   background-color: var(--basic-red);
@@ -397,7 +397,7 @@ img {
 /* customers */
 
 .customers {
-  margin-bottom: 80px;
+  padding: 80px 0;
   outline: 5px solid rgba(0,0,255,0.3); /* Рамка для отладки*/
   outline-offset: -5px;                   /* Рамка для отладки*/
 }
@@ -408,8 +408,9 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
+  border-top:  2px solid var(--basic-grey);
+  border-bottom: 2px solid var(--basic-grey);
 }
-
 
 .customers__item {
   opacity: 0.2;
@@ -423,136 +424,19 @@ img {
   opacity: 0.1;
 }
 
-/* main-footer */
+                          /* main for catalog.html */
 
-.main-footer {
-  outline: 5px solid rgba(255,0,0,0.7); /* Рамка для отладки*/
-  outline-offset: -5px;                   /* Рамка для отладки*/
-}
+/* catalog-block */
 
-.contacts__map {
-  background-image: url("../img/map.jpg");
-  background-color: var(--basic-grey-dark);
-}
-
-.contacts__block {
-  text-align: left;
-  width: 319px;
-  min-height: 308px;
-  padding-left: 50px;
-  outline: 5px solid rgba(0,255,0,0.7); /* Рамка для отладки*/
-  outline-offset: -5px;                   /* Рамка для отладки*/
-}
-
-.block-contacts__title {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.block-contacts__address,
-.block-contacts__tel {
-  font-style: normal;
-  line-height: 24px;
-  color: var(--basic-grey-darken);
-}
-
-.block-contacts__tel {
-  display: block;
-}
-
-.block-contacts__link-modal {
-  background-color: var(--basic-red);
-  color: var(--basic-white);
-}
-
-.container_footer {
+.catalog-grid {
   display: grid;
-  grid-template-columns: 3fr 8fr;
-  column-gap: 140px;
-  padding: 68px 0;
-}
-
-.socials__list {
-  max-width: 260px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-
-.socials__item {
-  display: inline;
-}
-
-.main-footer__also {
-  text-align: left;
-}
-
-.also__tagline {
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-.also__promotion {
-  line-height: 22px;
-  color: var(--special-grey-blacken);
-  padding: 0;
-  margin: 0;
-}
-
-/* Modal */
-
-.modal__title {
-  font-size: 45px;
-  line-height: 53px;
-  font-weight: 700;
-}
-
-.field__label {
-  line-height: 18px;
-  font-weight: 700;
-}
-
-.field__input {
-  line-height: 18px;
-  color: var(--special-capacity-blacken);
-  border: 1px solid var(--special-capacity-black);
-  border-radius: 3px;
-}
-
-.field__input:hover {
-  border: 1px solid var(--special-capacity-blacken);
-}
-
-.field__input:focus,
-.field__input:focus::placeholder {
-  color: var(--basic-black);
-  border: 1px solid var(--basic-black);
-}
-
-.form-modal__button {
-  background-color: var(--basic-red);
-  color: var(--basic-white);
-  outline: 1px solid transparent;
-}
-
-/* page-catalog */
-
-.catalog-block {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  column-gap: 140px;
+  grid-template-columns: 300px 1fr;
+  column-gap: 100px;
 }
 
 /* catalog-title */
 
 .catalog-title {
-  /* grid-column: 1/-1; */
   outline: 5px solid rgba(0,255,0,0.7);
   outline-offset: -5px;
   background-color: var(--basic-grey);
@@ -566,8 +450,12 @@ img {
 
 /* filter */
 
-.form-filter {
+.filter {
   grid-column: 1/2;
+  padding-right: 40px;
+}
+
+.form-filter {
   outline: 5px solid rgba(189, 46, 177, 0.7);
   outline-offset: -5px;
 }
@@ -642,6 +530,8 @@ img {
 
 .catalog__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
   outline: 5px solid rgba(255,0,255,0.3);
   outline-offset: -5px;
 }
@@ -690,8 +580,10 @@ img {
 
 .catalog__pagination {
   list-style: none;
-  outline: 5px solid rgba(118, 80, 224, 0.3);
-  outline-offset: -5px;
+  padding: 0;
+  margin: 0;
+  outline: 5px solid rgba(118, 80, 224, 0.3);  /* Рамка для отладки*/
+  outline-offset: -5px;                           /* Рамка для отладки*/
 }
 
 .pagination__link {
@@ -712,4 +604,120 @@ img {
   background-color: var(--basic-white);
 }
 
+/* main-footer */
 
+.main-footer {
+  outline: 5px solid rgba(255,0,0,0.7); /* Рамка для отладки*/
+  outline-offset: -5px;                   /* Рамка для отладки*/
+}
+
+.contacts__map {
+  background-image: url("../img/map.jpg");
+  background-color: var(--basic-grey-dark);
+}
+
+.contacts__block {
+  text-align: left;
+  width: 319px;
+  min-height: 308px;
+  padding-left: 50px;
+  outline: 5px solid rgba(0,255,0,0.7); /* Рамка для отладки*/
+  outline-offset: -5px;                   /* Рамка для отладки*/
+}
+
+.block-contacts__title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.block-contacts__address,
+.block-contacts__tel {
+  font-style: normal;
+  line-height: 24px;
+  color: var(--basic-grey-darken);
+}
+
+.block-contacts__tel {
+  display: block;
+}
+
+.block-contacts__link-modal {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+}
+
+.main-footer__container {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  column-gap: 40px;
+  row-gap: 20px;
+  padding: 68px 0;
+}
+
+.socials__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.socials__item {
+  display: inline;
+}
+
+.main-footer__also {
+  text-align: left;
+}
+
+.also__tagline {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.also__promotion {
+  line-height: 22px;
+  color: var(--special-grey-blacken);
+  padding: 0;
+  margin: 0;
+}
+
+/* Modal */
+
+.modal__title {
+  font-size: 45px;
+  line-height: 53px;
+  font-weight: 700;
+}
+
+.field__label {
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.field__input {
+  line-height: 18px;
+  color: var(--special-capacity-blacken);
+  border: 1px solid var(--special-capacity-black);
+  border-radius: 3px;
+}
+
+.field__input:hover {
+  border: 1px solid var(--special-capacity-blacken);
+}
+
+.field__input:focus,
+.field__input:focus::placeholder {
+  color: var(--basic-black);
+  border: 1px solid var(--basic-black);
+}
+
+.form-modal__button {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  outline: 1px solid transparent;
+}
