@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,7 +49,7 @@
       </div>
     </header>
 
-    <main class="main">
+    <main>
 
       <div class="catalog-title">
         <div class="container"><!--центровщик-->
@@ -58,173 +58,174 @@
       </div>
 
       <h1 class="visually-hidden">Каталог товаров</h1>
+      <div class="catalog-grid container">
+        <section class="filter">
+          <form class="filter__form form-filter" action="https://echo.htmlacademy.ru" method="post">
 
-      <section class="filter">
-        <form class="filter__form form-filter" action="https://echo.htmlacademy.ru" method="post">
+            <h2 class="visually-hidden">Фильтр товаров</h2>
 
-          <h2 class="visually-hidden">Фильтр товаров</h2>
+            <fieldset class="form-filter__cost cost-filter">
+              <legend class="cost-filter__legend">Стоимость:</legend>
 
-          <fieldset class="form-filter__cost cost-filter">
-            <legend class="cost-filter__legend">Стоимость:</legend>
+              <label class="cost-filter__label">
+                от <input class="cost-filter__input" type="number" name="cost-min" min="1" max="14999" step="1" placeholder="0" value="0">
+              </label>
 
-            <label class="cost-filter__label">
-              от <input class="cost-filter__input" type="number" name="cost-min" min="1" max="14999" step="1" placeholder="0" value="0">
-            </label>
+              <label class="cost-filter__label">
+                до <input  class="cost-filter__input" type="number" name="cost-max" min="2" max="15000" step="1" placeholder="15 000" value="15000">
+              </label>
+            </fieldset>
 
-            <label class="cost-filter__label">
-              до <input  class="cost-filter__input" type="number" name="cost-max" min="2" max="15000" step="1" placeholder="15 000" value="15000">
-            </label>
-          </fieldset>
+            <fieldset class="form-filter__grid fieldset">
+              <legend class="fieldset__legend">Сетка</legend>
 
-          <fieldset class="form-filter__grid fieldset">
-            <legend class="fieldset__legend">Сетка</legend>
+              <ul class="fieldset__list">
+                <li class="fieldset__item radio">
+                  <input class="radio__input" type="radio" checked id="filter-adaptive" name="grid" value="adaptive">
+                  <label class="radio__label" for="filter-adaptive">Адаптивная</label>
+                </li>
 
-            <ul class="fieldset__list">
-              <li class="fieldset__item radio">
-                <input class="radio__input" type="radio" checked id="filter-adaptive" name="grid" value="adaptive">
-                <label class="radio__label" for="filter-adaptive">Адаптивная</label>
-              </li>
+                <li class="fieldset__item radio">
+                  <input class="radio__input" type="radio" id="filter-fixed" name="grid" value="fixed">
+                  <label class="radio__label" for="filter-fixed">Фиксированная</label>
+                </li>
 
-              <li class="fieldset__item radio">
-                <input class="radio__input" type="radio" id="filter-fixed" name="grid" value="fixed">
-                <label class="radio__label" for="filter-fixed">Фиксированная</label>
-              </li>
+                <li class="fieldset__item radio">
+                  <input class="radio__input" type="radio" id="filter-rubber" name="grid" value="rubber">
+                  <label class="radio__label" for="filter-rubber">Резиновая</label>
+                </li>
+              </ul>
+            </fieldset>
 
-              <li class="fieldset__item radio">
-                <input class="radio__input" type="radio" id="filter-rubber" name="grid" value="rubber">
-                <label class="radio__label" for="filter-rubber">Резиновая</label>
-              </li>
-            </ul>
-          </fieldset>
+            <fieldset class="form-filter__features fieldset">
+              <legend class="fieldset__legend">Особенности</legend>
 
-          <fieldset class="form-filter__features fieldset">
-            <legend class="fieldset__legend">Особенности</legend>
+              <ul class="fieldset__list">
+                <li class="fieldset__item checkbox">
+                  <input class="checkbox__input" type="checkbox" checked id="filter-slaider" name="slaider">
+                  <label class="checkbox__label" for="filter-slaider">Слайдер</label>
+                </li>
 
-            <ul class="fieldset__list">
-              <li class="fieldset__item checkbox">
-                <input class="checkbox__input" type="checkbox" checked id="filter-slaider" name="slaider">
-                <label class="checkbox__label" for="filter-slaider">Слайдер</label>
-              </li>
+                <li class="fieldset__item checkbox">
+                  <input class="checkbox__input" type="checkbox" id="filter-advantages" name="advantages">
+                  <label class="checkbox__label" for="filter-advantages">Блок преимуществ</label>
+                </li>
 
-              <li class="fieldset__item checkbox">
-                <input class="checkbox__input" type="checkbox" id="filter-advantages" name="advantages">
-                <label class="checkbox__label" for="filter-advantages">Блок преимуществ</label>
-              </li>
+                <li class="fieldset__item checkbox">
+                  <input class="checkbox__input" type="checkbox" checked id="filter-news" name="news">
+                  <label class="checkbox__label" for="filter-news">Новости</label>
+                </li>
 
-              <li class="fieldset__item checkbox">
-                <input class="checkbox__input" type="checkbox" checked id="filter-news" name="news">
-                <label class="checkbox__label" for="filter-news">Новости</label>
-              </li>
+                <li class="fieldset__item checkbox">
+                  <input class="checkbox__input" type="checkbox" id="filter-gallery" name="gallery">
+                  <label class="checkbox__label" for="filter-gallery">Галерея</label>
+                </li>
 
-              <li class="fieldset__item checkbox">
-                <input class="checkbox__input" type="checkbox" id="filter-gallery" name="gallery">
-                <label class="checkbox__label" for="filter-gallery">Галерея</label>
-              </li>
+                <li class="fieldset__item checkbox">
+                  <input class="checkbox__input" type="checkbox" id="filter-shopping-cart" name="shopping-cart">
+                  <label class="checkbox__label" for="filter-shopping-cart">Корзина</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button form-filter__button" type="submit">Показать</button>
+          </form>
+        </section>
 
-              <li class="fieldset__item checkbox">
-                <input class="checkbox__input" type="checkbox" id="filter-shopping-cart" name="shopping-cart">
-                <label class="checkbox__label" for="filter-shopping-cart">Корзина</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="button form-filter__button" type="submit">Показать</button>
-        </form>
-      </section>
+        <section class="sorting">
+          <h2 class="visually-hidden">Сортировка</h2>
+          <p class="sorting__title">Сортировать:</p>
 
-      <section class="sorting">
-        <h2 class="visually-hidden">Сортировка</h2>
-        <p class="sorting__title">Сортировать:</p>
-
-        <ul class="sorting__list">
-          <li class="sorting__item">
-            <a class="sorting__link" href="">По цене</a>
-         </li>
-
-          <li class="sorting__item">
-            <a class="sorting__link" href="">По типу</a>
+          <ul class="sorting__list">
+            <li class="sorting__item">
+              <a class="sorting__link" href="">По цене</a>
           </li>
 
-          <li class="sorting__item">
-            <a class="sorting__link" href="">По названию</a>
-          </li>
-        </ul>
-      </section>
+            <li class="sorting__item">
+              <a class="sorting__link" href="">По типу</a>
+            </li>
 
-      <section class="catalog">
-        <h2 class="visually-hidden">Список товаров</h2>
+            <li class="sorting__item">
+              <a class="sorting__link" href="">По названию</a>
+            </li>
+          </ul>
+        </section>
 
-        <ul class="catalog__list">
-          <li class="catalog__item item-catalog">
-            <img class="item-catalog__img" src="img/product-card-sedona.jpg" width="358" height="578" alt="Sedona - Информационный сайт для туристов">
+        <section class="catalog">
+          <h2 class="visually-hidden">Список товаров</h2>
 
-            <div class="item-catalog__desc"><!--Блок будет появляться при наведении-->
-              <h3 class="item-catalog__title"><a href="">Sedona</a></h3>
-              <p class="item-catalog__about">Информационный сайт для туристов</p>
-              <a class="button item-catalog__link" href="">9900 <span>&#8381;</span></a>
-            </div>
-            <li>
+          <ul class="catalog__list">
+            <li class="catalog__item item-catalog">
+              <img class="item-catalog__img" src="img/product-card-sedona.jpg" width="358" height="578" alt="Sedona - Информационный сайт для туристов">
 
-          <li class="catalog__item item-catalog">
-            <img class="item-catalog__img" src="img/product-card-pink.jpg" width="358" height="578" alt="Pink App - Продуктовый лендинг приложения для iOS и Android">
-            <div class="item-catalog__desc"><!--Блок будет появляться при наведении-->
-              <h3 class="item-catalog__title"><a href="">Pink App</a></h3>
-              <p class="item-catalog__about">Продуктовый лендинг приложения для iOS и Android</p>
-              <a class="button item-catalog__link" href="">9900 <span>&#8381;</span></a>
-            </div>
-          </li>
+              <div class="item-catalog__desc visually-hidden"><!--Блок будет появляться при наведении-->
+                <h3 class="item-catalog__title"><a href="">Sedona</a></h3>
+                <p class="item-catalog__about">Информационный сайт для туристов</p>
+                <a class="button item-catalog__link" href="">9900 <span>&#8381;</span></a>
+              </div>
+            </li>
 
-          <li class="catalog__item item-catalog">
-            <img class="item-catalog__img" src="img/product-card-borodinskipng.jpg" width="358" height="578" alt="Barbershop - Сайт салона красоты. Для мужчин, да.">
-            <div class="item-catalog__desc"><!--Блок будет появляться при наведении-->
-              <h3 class="item-catalog__title"><a href="">Barbershop</a></h3>
-              <p class="item-catalog__about">Сайт салона красоты. Для мужчин, да.</p>
-              <a class="button item-catalog__link" href="">9900 <span>&#8381;</span></a>
-            </div>
-          </li>
+            <li class="catalog__item item-catalog">
+              <img class="item-catalog__img" src="img/product-card-pink.jpg" width="358" height="578" alt="Pink App - Продуктовый лендинг приложения для iOS и Android">
+              <div class="item-catalog__desc visually-hidden"><!--Блок будет появляться при наведении-->
+                <h3 class="item-catalog__title"><a href="">Pink App</a></h3>
+                <p class="item-catalog__about">Продуктовый лендинг приложения для iOS и Android</p>
+                <a class="button item-catalog__link" href="">9900 <span>&#8381;</span></a>
+              </div>
+            </li>
 
-          <li class="catalog__item item-catalog">
-            <img class="item-catalog__img" src="img/product-card-mishka.jpg" width="358" height="578"  alt="MISHKA - Интернет-магазин вязаных игрушек">
-            <div class="item-catalog__desc"><!--Блок будет появляться при наведении-->
-              <h3 class="item-catalog__title"><a href="">MISHKA</a></h3>
-              <p class="item-catalog__about">Интернет-магазин вязаных игрушек</p>
-              <a class="button item-catalog__link" href="">9900 <span>&#8381;</span></a>
-            </div>
-          </li>
+            <li class="catalog__item item-catalog">
+              <img class="item-catalog__img" src="img/product-card-borodinskipng.jpg" width="358" height="578" alt="Barbershop - Сайт салона красоты. Для мужчин, да.">
+              <div class="item-catalog__desc visually-hidden"><!--Блок будет появляться при наведении-->
+                <h3 class="item-catalog__title"><a href="">Barbershop</a></h3>
+                <p class="item-catalog__about">Сайт салона красоты. Для мужчин, да.</p>
+                <a class="button item-catalog__link" href="">9900 <span>&#8381;</span></a>
+              </div>
+            </li>
 
-          <li class="catalog__item item-catalog">
-            <img class="item-catalog__img" src="img/product-card-plus_a.jpg" width="358" height="578" alt="A Plus - Лендинг курсов повышения квалификации">
-            <div class="item-catalog__desc"><!--Блок будет появляться при наведении-->
-              <h3 class="item-catalog__title"><a href="">A Plus</a></h3>
-              <p class="item-catalog__about">Лендинг курсов повышения квалификации</p>
-              <a class="button item-catalog__link" href="">9900 <span>&#8381;</span></a>
-            </div>
-          </li>
+            <li class="catalog__item item-catalog">
+              <img class="item-catalog__img" src="img/product-card-mishka.jpg" width="358" height="578"  alt="MISHKA - Интернет-магазин вязаных игрушек">
+              <div class="item-catalog__desc visually-hidden"><!--Блок будет появляться при наведении-->
+                <h3 class="item-catalog__title"><a href="">MISHKA</a></h3>
+                <p class="item-catalog__about">Интернет-магазин вязаных игрушек</p>
+                <a class="button item-catalog__link" href="">9900 <span>&#8381;</span></a>
+              </div>
+            </li>
 
-          <li class="catalog__item item-catalog">
-            <img class="item-catalog__img" src="img/product-card-kvast.jpg" width="358" height="578" alt="КВАСТ - Промо-сайт производителя крафтового кваса">
-            <div class="item-catalog__desc"><!--Блок будет появляться при наведении-->
-              <h3 class="item-catalog__title"><a href="">КВАСТ</a></h3>
-              <p class="item-catalog__about">Промо-сайт производителя крафтового кваса</p>
-              <a class="button item-catalog__link" href="">9900 <span>&#8381;</span></a>
-            </div>
-          </li>
-        </ul>
+            <li class="catalog__item item-catalog">
+              <img class="item-catalog__img" src="img/product-card-plus_a.jpg" width="358" height="578" alt="A Plus - Лендинг курсов повышения квалификации">
+              <div class="item-catalog__desc visually-hidden"><!--Блок будет появляться при наведении-->
+                <h3 class="item-catalog__title"><a href="">A Plus</a></h3>
+                <p class="item-catalog__about">Лендинг курсов повышения квалификации</p>
+                <a class="button item-catalog__link" href="">9900 <span>&#8381;</span></a>
+              </div>
+            </li>
 
-        <ul class="catalog__pagination pagination">
-          <li class="pagination__item">
-            <a class="button pagination__link pagination__link-current">1</a>
-          </li>
-          <li class="pagination__item">
-            <a class="button pagination__link" href="">2</a>
-          </li>
-          <li class="pagination__item">
-            <a class="button pagination__link" href="">3</a>
-          </li>
-          <li class="pagination__item">
-            <a class="button pagination__link" href="">Следующая</a>
-          </li>
-        </ul>
-      </section>
+            <li class="catalog__item item-catalog">
+              <img class="item-catalog__img" src="img/product-card-kvast.jpg" width="358" height="578" alt="КВАСТ - Промо-сайт производителя крафтового кваса">
+              <div class="item-catalog__desc visually-hidden"><!--Блок будет появляться при наведении-->
+                <h3 class="item-catalog__title"><a href="">КВАСТ</a></h3>
+                <p class="item-catalog__about">Промо-сайт производителя крафтового кваса</p>
+                <a class="button item-catalog__link" href="">9900 <span>&#8381;</span></a>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="catalog__pagination pagination">
+            <li class="pagination__item">
+              <a class="button pagination__link pagination__link-current">1</a>
+            </li>
+            <li class="pagination__item">
+              <a class="button pagination__link" href="">2</a>
+            </li>
+            <li class="pagination__item">
+              <a class="button pagination__link" href="">3</a>
+            </li>
+            <li class="pagination__item">
+              <a class="button pagination__link" href="">Следующая</a>
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
 
     <footer class="main-footer">
@@ -241,8 +242,7 @@
         </div>
       </section>
 
-      <div class="container">
-
+      <div class="main-footer__container container">
         <section class="main-footer__socials socials">
           <h2 class="visually-hidden">Социальные сети</h2>
 
@@ -266,7 +266,7 @@
       </div>
     </footer>
 
-    <section class="modal">
+    <section class="modal visually-hidden">
       <h2 class="modal__title">Напишите нам</h2>
 
       <form class="modal__form form-modal" action="https://echo.htmlacademy.ru" method="post">
