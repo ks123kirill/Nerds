@@ -132,9 +132,16 @@ img {
   outline-offset: -5px; */
 }
 
+.nav {
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+  padding-top: 40px;
+}
+
 .main-header__logo {
-  text-align: left;
-  display: contents;   /* <a> никак не хотел ужиматься под содержимое svg*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: start;
   /* outline: 5px solid rgba(255,0,0,0.3);
   outline-offset: -5px; */
 }
@@ -147,12 +154,6 @@ img {
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
-}
-
-.nav {
-  display: grid;
-  grid-template-columns: 3fr 6fr 3fr;
-  padding-top: 40px;
 }
 
 .logo:focus path {
@@ -186,6 +187,11 @@ img {
 .nav__link:focus {
   color: var(--basic-black);
   opacity: 0.3;
+}
+
+.nav__item:active,
+.add-nav__item:active {
+  border-bottom: 2px solid var(--basic-red);
 }
 
 .add-nav {
@@ -243,26 +249,25 @@ img {
   box-sizing: border-box;
   min-height: 430px;
   width: 520px;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 79px 0 79px 0;
 }
 
 .slide__slogan {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
-  margin: 78px 0 0 0;
+  margin: 0;
+  padding: 0 0 25px 0;
 }
 
 .slide__text {
   color: var(--basic-black-whiten);
-  margin: 20px 0 0 0;
+  margin: 0;
+  padding: 0 0 40px 0;
 }
 
 .slide__button {
-  margin: 33px 0 79px 0;
+  margin: 0;
 }
 
 .slide__link {
@@ -286,10 +291,6 @@ img {
 
 .item-services {
   min-height: 346px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
   text-align: left;
   padding-right: 60px;
   /* outline: 5px solid rgba(0,255,255,0.3);
@@ -301,7 +302,7 @@ img {
   height: 146px;
   content: "";
   display: block;
-  margin-bottom: 6px;
+  margin: 0 0 25px 0;
 }
 
  .item-services_websites::before {
@@ -326,15 +327,17 @@ img {
   color: var(--basic-black-whiten);
   text-transform: uppercase;
   margin: 0;
+  padding: 0 0 15px 0;
 }
 
 .item-services__text {
   color: var(--basic-black-whiten);
   margin: 0;
+  padding: 0 0 32px 0;
 }
 
 .item-services__button {
-  margin: 14px 0 0 0;
+  margin: 0;
 }
 
 .item-services__link {
@@ -384,7 +387,7 @@ img {
 /* about */
 
 .about {
-  padding: 0px;
+  padding: 0 0 49px 0;
   min-height: 525px;
   box-sizing: border-box;
 }
@@ -396,12 +399,9 @@ img {
 }
 
 .about__article {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  /* outline: 5px solid rgba(255,0,0,0.3);
+   /* outline: 5px solid rgba(255,0,0,0.3);
   outline-offset: -5px; */
+  padding: 72px 0 0 0;
   text-align: left;
 }
 
@@ -414,32 +414,35 @@ img {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
-  margin: 72px 0 0 0;
+  margin: 0;
+  padding: 0 0 34px 0;
 }
 
 .article-about__text {
   color:var(--basic-black-whiten);
-  margin: 34px 0 0 0;
+  margin: 0;
+  padding:  0 0 41px 0;
 }
 
 .article-about__head {
   text-transform: uppercase;
   font-weight: 700;
   color:var(--basic-black-whiten);
-  margin: 42px 0 0 0;
+  margin: 0;
+  padding: 0 0 23px 0;
 }
 
 .article-about__capabilities {
   list-style: none;
   padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .capabilities__item {
   position: relative;
   color:var(--basic-black-whiten);
-  margin-top: 24px;
-  padding-left: 36px;
+  padding: 0 0 24px 36px;
 }
 
 .capabilities__item:before {
@@ -447,7 +450,7 @@ img {
   content: "";
   width: 25px;
   height: 2px;
-  top: 9px;
+  top: 11px;
   left: 0;
   background-color: var(--basic-red);
 }
@@ -456,7 +459,6 @@ img {
   content: "";
   display: block;
   height: 208px;
-  order: 1;
   background-color: var(--basic-red);
   background-image: url("../img/logo-nerds-color.png");
   margin-top: 40px;
@@ -747,6 +749,8 @@ img {
 
 .contacts__map {
   background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: var(--basic-grey-dark);
 }
 
@@ -755,7 +759,7 @@ img {
   position: absolute;
   width: 231px;
   height: 190px;
-  top: 86px;
+  top: -337px;
   left: 822px;
 }
 
@@ -773,7 +777,7 @@ img {
 
 .block-contacts {
   position: absolute;
-  top: 54px;
+  top: -369px;
   left: 140px;
   display: flex;
   flex-direction: column;
