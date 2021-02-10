@@ -189,10 +189,9 @@ img {
   color: var(--basic-red);
 }
 
-.nav__link:focus :not(.cart__link:before),
-.nav__link:active :not(.cart__link:before) {
-  color: var(--basic-black);
-  opacity: 0.3;
+.nav__link:focus,
+.nav__link:active {
+  color: var(--special-capacity-black);
 }
 
 .add-nav {
@@ -224,7 +223,7 @@ img {
 }
 
 .nav__item_active,
-.add-nav__item_activ {
+.add-nav__item_active {
   border-color: var(--basic-red);
 }
 
@@ -729,28 +728,19 @@ img {
   margin: 0 0 5px 25px;
 }
 
-.sorting__link_current {
-  color: var(--basic-black);
-}
-
-/* Почему не работает эта схема? после этого :not - .sorting__link:focus черным не становится */
-/* .sorting__link:not(.sorting__link_current):hover  {
-  color: var(--special-capacity-blacken);
-}
-
-.sorting__link:focus {
-  color: var(--basic-black);
-} */
-
 .sorting__link:hover {
   color: var(--special-capacity-blacken);
 }
 
-.sorting__link_current:hover {
+.sorting__link:focus {
   color: var(--basic-black);
 }
 
-.sorting__link:focus {
+.sorting__link_current {
+  color: var(--basic-black);
+}
+
+.sorting__link_current:hover {
   color: var(--basic-black);
 }
 
@@ -779,29 +769,29 @@ img {
 } */
 
 .item-catalog {
-  display: grid;
-  grid-template-columns: 360px;
-  grid-template-rows: 40px 349px min-content;
+  position: relative;
+  z-index: 1;
   border-radius: 5px;
 }
 
 .item-catalog__img {
-  grid-column: 1/-1;
-  grid-row: 2/-1;
-  z-index: 2;
   background-color: var(--basic-grey-dark);
   border: 1px solid var(--special-grey-white);
 }
 
 .item-catalog__desc {
-  grid-column: 1/-1;
-  grid-row: 3/-1;
-  z-index: 1;
+  position: absolute;
+  width: 358px;
+  height: 231px;
+  overflow-y: auto;
+  z-index: -1;
+  bottom: 8px;
+  left: 1px;
   background-color: var(--basic-grey);
 }
 
 .item-catalog__title {
-  padding: 25px 0 0 0;
+  padding: 27px 0 0 0;
   margin: 0;
 }
 
@@ -831,7 +821,7 @@ img {
 
 .item-catalog__link {
   padding: 16px 75px;
-  margin: 34px 0 45px 0;
+  margin: 34px 0 42px 0;
   color: var(--basic-white);
   background-color: var(--basic-red);
 }
@@ -845,7 +835,6 @@ img {
 }
 
 .catalog__item::before {
-  grid-row: 1/2;
   display: block;
   content: url("../img/browser.png");
   width: 360px;
@@ -863,7 +852,7 @@ img {
 }
 
 .item-catalog:hover .item-catalog__desc {
-  z-index: 3;
+  z-index: 2;
 }
 
 .catalog__pagination {
@@ -895,13 +884,13 @@ img {
   padding: 16px 78px;
 }
 
-.pagination__link-current {
+.pagination__link_current {
   background-color: var(--basic-white);
   padding: 13px 17px;
   border: 3px solid var(--special-grey-whiten);
 }
 
-.pagination__link:hover:not(.pagination__link-current) {
+.pagination__link:hover:not(.pagination__link_current) {
   background-color: var(--special-grey);
 }
 
