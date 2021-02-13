@@ -305,15 +305,17 @@ img {
 .slider__controls {
   position: absolute;
   display: flex;
-  justify-content: space-between;
-  width: 88px;
-  height: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 150px;
   top: 311px;
   left: 536px;
   z-index: 20;
 }
 
 .slider__toggle {
+  margin-right: 17px;
+  margin-bottom: 5px;
   padding: 0;
   width: 18px;
   height: 18px;
