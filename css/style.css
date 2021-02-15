@@ -980,21 +980,21 @@ img {
 }
 
 .item-catalog__img {
-  background-color: var(--basic-grey-dark);
-  border: 1px solid var(--special-grey-white);
-  border-radius: 0 0 3px 3px;
+  background-color: var(--special-grey-white);
+  border: 1px solid var(--special-grey-white); /* Не получается с box-shadow: inset, тень ложится на background-color, а на картинку нет.*/
+  border-radius: 0 0 5px 5px;
 }
 
 .item-catalog__desc {
   position: absolute;
-  width: 358px;
+  width: 360px;
   height: 231px;
   overflow-y: auto;
   z-index: -1;
-  bottom: 8px;
-  left: 1px;
+  bottom: 6px;
+  left: 0;
   background-color: var(--basic-grey);
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 5px 5px;
 }
 
 .item-catalog__title {
@@ -1043,10 +1043,14 @@ img {
 
 .catalog__item::before {
   display: block;
-  content: url("../img/browser.svg");
+  content: "";
   width: 360px;
   height: 40px;
   opacity: 0.12;
+  background-image: url("../img/browser.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .catalog__item:hover::before {
@@ -1054,7 +1058,8 @@ img {
 }
 
 .item-catalog:hover .item-catalog__img {
-  border: none;
+  border-color: var(--basic-white);
+  background-color: var(--basic-white);/* почему то img не растягивается на 100% и 1px остается с каждой стороны и показывает background-color, который с border одного цвета и утолщает рамку*/
   box-shadow: 0px 6px 15px var(--special-opacity-darken);
 }
 
@@ -1184,7 +1189,7 @@ img {
   display: block;
 }
 
-.block-contact__button {
+.block-contacts__button {
   margin: 38px 0 47px 0;
 }
 
@@ -1226,6 +1231,19 @@ img {
   padding: 0;
   border-radius: 50%;
   background-color: var(--basic-grey-whiten);
+}
+
+.socials__link:hover {
+  background-color: var(--special-red);
+}
+
+.socials__link:focus {
+  background-color: var(--special-red-dark);
+  box-shadow: inset 0px 3px 0px var(--special-opacity-dark);
+}
+
+.socials__link:focus svg {
+  opacity: 0.3;
 }
 
 .main-footer__also {
