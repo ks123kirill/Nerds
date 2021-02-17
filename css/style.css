@@ -572,12 +572,12 @@ img {
   align-items: center;
 }
 
-/* https://up.htmlacademy.ru/htmlcss/30/module/8/item/2 Правильно ли я сделал, для страхования примерно одинакового размера логотипов при дополнении (crm закрузка картинок более высокого разрешения) */
-.customers__img {
+/* Код временно закомментирован. Пока не понятно, как лучше его оформить*/
+/* .customers__img {
   width: 210px;
   height: 90px;
   object-fit: scale-down;
-}
+} */
 
 .customers__item:first-of-type .customers__link {
   padding: 20px 17px 0 0px;
@@ -897,11 +897,6 @@ img {
   margin: 0 26px 5px 0;
 }
 
-/* Вариант если будет переполнение справа после .sorting__link_descend/
-/* .sorting__list :nth-child(n+6) {
-  margin-left: 25px;
-} */
-
 .sorting__link_descend,
 .sorting__link_ascend {
   margin: 0 0 5px 19px;
@@ -963,7 +958,8 @@ img {
   background-color: var(--special-grey-white);
   border: 1px solid var(--special-grey-white);
   border-radius: 0 0 5px 5px;
-  object-fit: contain; /* Нужно ли здесь это свойство, если img {width: 100%} ? */
+/* временно закоментировал. Надо разобраться в его необходимости */
+  /* object-fit: contain;  */
 }
 
 .item-catalog__desc {
@@ -1253,8 +1249,6 @@ img {
   text-align: left;
   box-sizing: border-box;
   background-color: var(--basic-white);
-  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
-  /* Пока не разобрался в чем разница между drop-shadow и box-shadow*/
   box-shadow: 0 30px 50px var(--special-opacity-black);
   z-index: 3;
   overflow-y: overlay;
@@ -1270,6 +1264,7 @@ img {
 
 .field {
   display: inline-block;
+  vertical-align: top;
   padding: 37px 0 0 0;
   margin: 0;
 }
@@ -1305,14 +1300,12 @@ img {
   height: 118px;
 }
 
-.field__input:hover,
-.field__input:hover::placeholder {
+.field__input:hover {
   border: 2px solid var(--special-grey-dark);
   color: var(--special-opacity-grey);
 }
 
-.field__input:focus,
-.field__input:focus::placeholder {
+.field__input:focus {
   color: var(--special-grey-blacken);
   border: 2px solid var(--basic-black);
 }
