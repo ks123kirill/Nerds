@@ -1310,6 +1310,10 @@ img {
   border: 2px solid var(--basic-black);
 }
 
+.field__input:focus::placeholder {
+  color: var(--special-grey-blacken);
+}
+
 .field__input:invalid {
   border: 2px solid var(--basic-red);
   color: var(--basic-red);
