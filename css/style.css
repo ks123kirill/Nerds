@@ -59,6 +59,7 @@
   --special-opacity-blacken:  rgba(0, 0, 0, 0.6);
   --special-opacity-dark:  rgba(0, 1, 1, 0.1);
   --special-opacity-darken:  rgba(0, 1, 1, 0.25);
+  --special-opacity-grey: rgba(68, 68, 68, 0.5);
 }
 
 /* Global */
@@ -126,16 +127,12 @@ img {
 .container {
   width: 1160px;
   margin: 0 auto;
-  /* outline: 5px dotted rgba(0,0,0,0.3);
-  outline-offset: -5px; */
 }
 
 /* main-header */
 
 .main-header {
   background-color: var(--basic-grey);
-  /* outline: 5px solid rgba(0,255,0,0.7);
-  outline-offset: -5px; */
 }
 
 .nav {
@@ -148,8 +145,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-self: start;
-  /* outline: 5px solid rgba(255,0,0,0.3);
-  outline-offset: -5px; */
 }
 
 .logo__img {
@@ -174,8 +169,6 @@ img {
   list-style: none;
   padding: 34px 0 0 71px;
   margin: 0;
-  /* outline: 5px solid rgba(255,0,255,0.3);
-  outline-offset: -5px; */
 }
 
 .nav__item {
@@ -207,12 +200,11 @@ img {
   list-style: none;
   margin: 0;
   padding: 34px 0 0 0;
-  /* outline: 5px solid rgba(0,255,255,0.3);
-  outline-offset: -5px; */
 }
 
 .add-nav__item {
   padding: 0 0 14px 41px;
+  margin: 0 0 0 20px;
   position: relative;
   border-bottom: 2px solid transparent;
   box-sizing: border-box;
@@ -255,8 +247,6 @@ img {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
-  /* outline: 5px solid rgba(0,255,255,0.3);
-  outline-offset: -5px;                    */
 }
 
 .slide_1 {
@@ -275,7 +265,7 @@ img {
   box-sizing: border-box;
   min-height: 430px;
   width: 520px;
-  padding: 72px 0 79px 0;
+  padding: 72px 0 60px 0;
 }
 
 .slide__slogan {
@@ -293,7 +283,7 @@ img {
 }
 
 .slide__button {
-  margin: 0;
+  margin: 0 0 19px 0;
 }
 
 .slide__link {
@@ -308,9 +298,9 @@ img {
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 150px;
-  top: 311px;
+  bottom: 97px; /* позиционирование от bottom для удобного расположения при переполнении*/
   left: 536px;
-  z-index: 5;
+  z-index: 1;
 }
 
 .slider__toggle {
@@ -346,8 +336,6 @@ img {
   min-height: 346px;
   text-align: left;
   padding-right: 60px;
-  /* outline: 5px solid rgba(0,255,255,0.3);
-  outline-offset: -5px;                    */
 }
 
 .item-services::before {
@@ -355,6 +343,9 @@ img {
   height: 146px;
   content: "";
   display: block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0 0 25px 0;
 }
 
@@ -452,16 +443,9 @@ img {
 }
 
 .about__article {
-   /* outline: 5px solid rgba(255,0,0,0.3);
-  outline-offset: -5px; */
-  padding: 72px 0 0 0;
+   padding: 72px 0 0 0;
   text-align: left;
 }
-
-/* .about__indicators {
-  outline: 5px solid rgba(0,0,255,0.3);
-  outline-offset: -5px;
-} */
 
 .article-about__tagline {
   font-size: 45px;
@@ -512,9 +496,13 @@ img {
   content: "";
   display: block;
   height: 208px;
-  background-color: var(--basic-red);
+  width: 360px; /* без width торчит background-color по краям*/
+  background-color: var(--basic-grey);
   background-image: url("../img/logo-nerds-color.png");
-  margin-top: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 40px 0 0 4px;
 }
 
 .indicators__table {
@@ -564,14 +552,11 @@ img {
 
 .customers {
   padding-bottom: 80px;
-  /* outline: 5px solid rgba(0,0,255,0.3);
-  outline-offset: -5px; */
 }
 
 .customers__list {
   display: grid;
   grid-template-columns: 280px 300px 300px 280px;
-  /* grid-template-rows: 180px; */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -585,6 +570,13 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* https://up.htmlacademy.ru/htmlcss/30/module/8/item/2 Правильно ли я сделал, для страхования примерно одинакового размера логотипов при дополнении (crm закрузка картинок более высокого разрешения) */
+.customers__img {
+  width: 210px;
+  height: 90px;
+  object-fit: scale-down;
 }
 
 .customers__item:first-of-type .customers__link {
@@ -631,8 +623,6 @@ img {
 
 .catalog-title {
   padding: 72px 0 110px 0;
-  /* outline: 5px solid rgba(0,255,0,0.7);
-  outline-offset: -5px; */
   background-color: var(--basic-grey);
 }
 
@@ -662,8 +652,6 @@ img {
 }
 
 .form-filter {
-  /* outline: 5px solid rgba(189, 46, 177, 0.7);
-  outline-offset: -5px; */
   padding: 0;
   margin: 0;
 }
@@ -881,8 +869,6 @@ img {
   display: grid;
   grid-template-columns: min-content 1fr;
   row-gap: 20px;
-  /* outline: 5px solid rgba(241, 75, 103, 0.7);
-  outline-offset: -5px; */
 }
 
 .sorting__title {
@@ -964,14 +950,7 @@ img {
   list-style: none;
   margin: 0;
   padding: 48px 0 0 0;
-  /* outline: 5px solid rgba(255,0,255,0.3);
-  outline-offset: -5px; */
 }
-
-/* .item-catalog {
-  outline: 5px solid rgba(118, 80, 224, 0.3);
-  outline-offset: -5px;
-} */
 
 .item-catalog {
   position: relative;
@@ -982,9 +961,9 @@ img {
 .item-catalog__img {
   display: block;
   background-color: var(--special-grey-white);
-  border: 1px solid var(--special-grey-white); 
+  border: 1px solid var(--special-grey-white);
   border-radius: 0 0 5px 5px;
-  object-fit: contain;
+  object-fit: contain; /* Нужно ли здесь это свойство, если img {width: 100%} ? */
 }
 
 .item-catalog__desc {
@@ -1061,7 +1040,7 @@ img {
 
 .item-catalog:hover .item-catalog__img {
   border-color: var(--basic-white);
-  background-color: var(--basic-white);/* почему то img не растягивается на 100% и 1px остается с каждой стороны и показывает background-color, который с border одного цвета и утолщает рамку*/
+  background-color: var(--basic-white);
   box-shadow: 0px 6px 15px var(--special-opacity-darken);
 }
 
@@ -1074,8 +1053,6 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
-  /* outline: 5px solid rgba(118, 80, 224, 0.3);
-  outline-offset: -5px; */
 }
 
 .pagination {
@@ -1116,11 +1093,6 @@ img {
 
                                           /* main-footer */
 
-/* .main-footer {
-  outline: 5px solid rgba(255,0,0,0.7);
-  outline-offset: -5px;
-} */
-
 .contacts {
   display: grid;
   grid-template-columns: 1fr 1440px 1fr;
@@ -1136,7 +1108,7 @@ img {
   position: relative; /* Убрать relative, когда map-marker будет реализован через JS*/
   grid-column: 2/-2;
   grid-row: 2/-2;
-  z-index: 2;
+  z-index: 1;
   margin-left: 9.7%;
 }
 
@@ -1164,8 +1136,6 @@ img {
   padding-left: 50px;
   padding-right: 50px;
   background-color: var(--basic-white);
-  /* outline: 5px solid rgba(0,255,0,0.7);
-  outline-offset: -5px; */
 }
 
 .block-contacts__title {
@@ -1270,7 +1240,7 @@ img {
 
 /* Modal */
 
-.modal {
+.modal-write-us {
   position: fixed;
   width: 960px;
   height: 590px;
@@ -1284,40 +1254,103 @@ img {
   box-sizing: border-box;
   background-color: var(--basic-white);
   /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
-  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
-  z-index: 10;
+  /* Пока не разобрался в чем разница между drop-shadow и box-shadow*/
+  box-shadow: 0 30px 50px var(--special-opacity-black);
+  z-index: 3;
+  overflow-y: overlay;
 }
 
-.modal__title {
+.modal-write-us__title {
   font-size: 45px;
   line-height: 53px;
   font-weight: 700;
+  margin: 0;
+  padding: 63px 0 0 0;
+}
+
+.field {
+  display: inline-block;
+  padding: 37px 0 0 0;
+  margin: 0;
+}
+
+.form-modal__login {
+  margin: 0 36px 0 0;
 }
 
 .field__label {
+  display: block;
   line-height: 18px;
   font-weight: 700;
+  padding-bottom: 7px;
 }
 
 .field__input {
+  width: 360px;
+  height: 50px;
+  padding: 15px;
+  box-sizing: border-box;
   line-height: 18px;
-  color: var(--special-opacity-blacken);
-  border: 1px solid var(--special-opacity-black);
+  color: var(--special-opacity-grey);
+  border: 2px solid var(--special-grey-white);
   border-radius: 3px;
 }
 
-.field__input:hover {
-  border: 1px solid var(--special-opacity-blacken);
+.field__input::placeholder {
+  color: var(--special-opacity-grey);
+}
+
+.field textarea {
+  width: 760px;
+  height: 118px;
+}
+
+.field__input:hover,
+.field__input:hover::placeholder {
+  border: 2px solid var(--special-grey-dark);
+  color: var(--special-opacity-grey);
 }
 
 .field__input:focus,
 .field__input:focus::placeholder {
-  color: var(--basic-black);
-  border: 1px solid var(--basic-black);
+  color: var(--special-grey-blacken);
+  border: 2px solid var(--basic-black);
+}
+
+.field__input:invalid {
+  border: 2px solid var(--basic-red);
+  color: var(--basic-red);
 }
 
 .form-modal__button {
   background-color: var(--basic-red);
   color: var(--basic-white);
   outline: 1px solid transparent;
+  padding: 16px 84px;
+  margin: 42px 0;
+}
+
+.modal-write-us__close {
+  position: absolute;
+  top: 76px;
+  right: 91px;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  background-image: url("../img/close-cross.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--basic-white);
+  border: none;
+  opacity: 0.3;
+}
+
+.modal-write-us__close:hover {
+  opacity: 1;
+}
+
+.modal-write-us__close:focus {
+  opacity: 0.1;
+  outline: none;
 }
