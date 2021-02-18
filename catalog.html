@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Нёрдс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico"><!-- 32x32 -->
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml"><!-- 32x32 -->
     <link rel="apple-touch-icon" href="img/favicon/favicon-180x180.png">
@@ -313,28 +313,27 @@
     </footer>
 
 
-    <section class="modal visually-hidden">
-      <h2 class="modal__title">Напишите нам</h2>
+    <section class="modal modal-write-us visually-hidden">
+      <h2 class="modal-write-us__title">Напишите нам</h2>
 
-      <form class="modal__form form-modal" action="https://echo.htmlacademy.ru" method="post">
+      <form class="modal-write-us__form form-modal" action="https://echo.htmlacademy.ru" method="post">
 
         <p class="form-modal__login field">
           <label class="field__label" for="login-login">Ваше имя:</label>
-          <input class="field__input" id="login-login" type="text" name="login" placeholder="Имя Фамилия">
+          <input class="field__input" id="login-login" type="text" name="login" placeholder="Имя Фамилия" pattern="^[А-Яа-яЁё\s]+$">
         </p>
 
         <p class="form-modal__email field">
           <label class="field__label" for="login-email">Ваш email:</label>
           <input class="field__input" id="login-email" type="email" name="email" placeholder="email@example.com">
         </p>
-
         <p class="form-modal__message field field_message">
-          <label class="field__label" for="login-message">Текст письма:</label><br>
+          <label class="field__label" for="login-message">Текст письма:</label>
           <textarea class="field__input" name="login-message" id="login-message" cols="30" rows="10"> В свободной форме</textarea>
         </p>
         <button class="button form-modal__button button_interactive" type="submit">Отправить</button>
       </form>
-      <button class="modal__close" type="button">Закрыть</button>
+      <button class="modal-write-us__close" type="button" aria-label="Закрыть"></button>
     </section>
   </body>
 </html>
