@@ -144,6 +144,7 @@ img {
 }
 
 .main-header__logo {
+  position: relative; /* Хак для визуализации нижнего outline при :focus, иначе обрезается нижним фоном */
   display: flex;
   flex-wrap: wrap;
   justify-self: start;
