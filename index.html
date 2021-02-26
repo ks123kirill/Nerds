@@ -269,27 +269,30 @@
     </footer>
 
 
-    <section class="modal modal-write-us visually-hidden">
+    <section class="modal modal-write-us">
       <h2 class="modal-write-us__title">Напишите нам</h2>
 
       <form class="modal-write-us__form form-modal" action="https://echo.htmlacademy.ru" method="post">
 
         <p class="form-modal__login field">
           <label class="field__label" for="login-login">Ваше имя:</label>
-          <input class="field__input" id="login-login" type="text" name="login" placeholder="Имя Фамилия" pattern="^[А-Яа-яЁё\s]+$">
+          <input class="field__input field__input_login " id="login-login" type="text" name="login" placeholder="Имя Фамилия" pattern="^[А-Яа-яЁё\s]+$">
         </p>
 
         <p class="form-modal__email field">
           <label class="field__label" for="login-email">Ваш email:</label>
-          <input class="field__input" id="login-email" type="email" name="email" placeholder="email@example.com">
+          <input class="field__input field__input_email" id="login-email" type="email" name="email" placeholder="email@example.com">
         </p>
         <p class="form-modal__message field field_message">
           <label class="field__label" for="login-message">Текст письма:</label>
-          <textarea class="field__input" name="login-message" id="login-message" cols="30" rows="10"> В свободной форме</textarea>
+          <textarea class="field__input field__input_message" name="login-message" id="login-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
         </p>
         <button class="button form-modal__button button_interactive" type="submit">Отправить</button>
       </form>
       <button class="modal-write-us__close" type="button" aria-label="Закрыть"></button>
     </section>
+
+    <script src="/js/javascript.min.js"></script>
+
   </body>
 </html>
