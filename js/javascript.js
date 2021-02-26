@@ -25,8 +25,10 @@ let initModal = function() {
       writeUsLogin.value = storageLogin;
       writeUsLogin.focus();
     }
-
-    else if(storageEmail) {
+    else {
+      writeUsLogin.focus();
+    }
+    if(storageEmail) {
       writeUsEmail.value = storageEmail;
     }
   });
@@ -59,29 +61,59 @@ let initModal = function() {
   });
 }
 
-// let initSlider = function() {
-//   const sliderToggle1 = document.querySelector('.slider__toggle_1');
-//   const sliderToggle2 = document.querySelector('.slider__toggle_2');
-//   const sliderToggle3 = document.querySelector('.slider__toggle_3');
-//   const sliderToggleCurrent = document.querySelector('.slider__toggle_current');
+let initSlider = function() {
+  const sliderControls = document.querySelector('.slider__controls');
+  const sliderToggle1 = sliderControls.querySelector('.slider__toggle_1');
+  const sliderToggle2 = sliderControls.querySelector('.slider__toggle_2');
+  const sliderToggle3 = sliderControls.querySelector('.slider__toggle_3');
+  const sliderList = document.querySelector('.slider__list');
+  const slide1 = sliderList.querySelector('.slide_1');
+  const slide2 = sliderList.querySelector('.slide_2');
+  const slide3 = sliderList.querySelector('.slide_3');
 
+  sliderToggle2.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    if(!sliderToggle2.classList.contains('slider__toggle_current')) {
+      sliderToggle2.classList.add('slider__toggle_current');
+      sliderToggle1.classList.remove('slider__toggle_current');
+      sliderToggle3.classList.remove('slider__toggle_current');
+      slide2.classList.add('slider__item_current');
+      slide1.classList.remove('slider__item_current');
+      slide3.classList.remove('slider__item_current');
+    }
+  })
 
-//   sliderToggle2.addEventListener('click', function(evt) {
-//     evt.preventDefault();
-//     if(sliderToggle2.classList.contains('slider__toggle_current')) {
-//       evt.
-//     }
-//   })
-// }
+  sliderToggle3.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    if(!sliderToggle3.classList.contains('slider__toggle_current')) {
+      sliderToggle3.classList.add('slider__toggle_current');
+      sliderToggle1.classList.remove('slider__toggle_current');
+      sliderToggle2.classList.remove('slider__toggle_current');
+      slide3.classList.add('slider__item_current');
+      slide1.classList.remove('slider__item_current');
+      slide2.classList.remove('slider__item_current');
+    }
+  })
 
-
+  sliderToggle1.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    if(!sliderToggle1.classList.contains('slider__toggle_current')) {
+      sliderToggle1.classList.add('slider__toggle_current');
+      sliderToggle2.classList.remove('slider__toggle_current');
+      sliderToggle3.classList.remove('slider__toggle_current');
+      slide1.classList.add('slider__item_current');
+      slide2.classList.remove('slider__item_current');
+      slide3.classList.remove('slider__item_current');
+    }
+  })
+}
 
 // let initMap = function() {весь код связанный с картой}
 
-
 initModal();
+initSlider();
+
 // initMap();
-// initSlider();
 
 
 
