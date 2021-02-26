@@ -274,6 +274,14 @@ img {
   background-image: url("../img/index-slide3.png");
 }
 
+.slider__item {
+  display: none;
+}
+
+.slider__item_current {
+  display: block;
+}
+
 .slide__content {
   box-sizing: border-box;
   min-height: 430px;
