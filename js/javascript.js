@@ -113,14 +113,14 @@ let initMap = function() {
   let ContactsMap = document.querySelector('.contacts__map');
 
   let myMap = new ymaps.Map(ContactsMap, {
-    center: [59.939260, 30.321795],
+    center: [59.939121, 30.321611],
     zoom: 17,
     controls: ['zoomControl']
   }, {});
 
   let myPlacemark = new ymaps.Placemark([59.938685, 30.323005], {}, {
     iconLayout: 'default#image',
-    iconImageHref: '../img/map-marker.png',
+    iconImageHref: 'img/map-marker.png',
     iconImageSize: [231, 190],
     iconImageOffset: [-30, -200]
   });
