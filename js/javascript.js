@@ -59,7 +59,7 @@ let initModal = function() {
         writeUsPopup.classList.remove('modal_error');
     }
   });
-}
+};
 
 let initSlider = function() {
   const sliderControls = document.querySelector('.slider__controls');
@@ -106,15 +106,28 @@ let initSlider = function() {
       slide3.classList.remove('slider__item_current');
     }
   })
-}
+};
 
-// let initMap = function() {весь код связанный с картой}
+let initMap = function() {
 
+  let ContactsMap = document.querySelector('.contacts__map');
+
+  let myMap = new ymaps.Map(ContactsMap, {
+    center: [59.939260, 30.321795],
+    zoom: 17,
+    controls: ['zoomControl']
+  }, {});
+
+  let myPlacemark = new ymaps.Placemark([59.938685, 30.323005], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '../img/map-marker.png',
+    iconImageSize: [231, 190],
+    iconImageOffset: [-30, -200]
+  });
+
+  myMap.geoObjects.add(myPlacemark);
+};
+
+ymaps.ready(initMap);
 initModal();
 initSlider();
-
-// initMap();
-
-
-
-

@@ -833,14 +833,6 @@ img {
   color: var(--special-opacity-black);
 }
 
-/* .radio__input:active + .radio__label {
-  color: var(--special-opacity-black);
-} */
-
-/* .radio__input:active + .radio__label::before {
-  opacity: 1;
-} */
-
 .radio__input:disabled + .radio__label::before {
   opacity: 0.1;
 }
@@ -1162,7 +1154,6 @@ img {
 }
 
 .block-contacts {
-  position: relative; /* Убрать relative, когда map-marker будет реализован через JS*/
   grid-column: 2/-2;
   grid-row: 2/-2;
   z-index: 1;
@@ -1170,19 +1161,11 @@ img {
 }
 
 .contacts__map {
+  width: 100%;
   background-image: url("../img/map.png");
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--basic-white);
-}
-
- .block-contacts::before {/* Временный псевдоэлемент для map-marker до реализации через JS*/
-  content: url("../img/map-marker.png");
-  position: absolute;
-  width: 231px;
-  height: 190px;
-  top: 32px;
-  left: 682px;
 }
 
 .contacts__block {
