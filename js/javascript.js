@@ -61,51 +61,78 @@ let initModal = function() {
   });
 };
 
-let initSlider = function() {
-  const sliderControls = document.querySelector('.slider__controls');
-  const sliderToggle1 = sliderControls.querySelector('.slider__toggle_1');
-  const sliderToggle2 = sliderControls.querySelector('.slider__toggle_2');
-  const sliderToggle3 = sliderControls.querySelector('.slider__toggle_3');
-  const sliderList = document.querySelector('.slider__list');
-  const slide1 = sliderList.querySelector('.slide_1');
-  const slide2 = sliderList.querySelector('.slide_2');
-  const slide3 = sliderList.querySelector('.slide_3');
+// let initSlider = function() {
+//   const sliderControls = document.querySelector('.slider__controls');
+//   const sliderToggle1 = sliderControls.querySelector('.slider__toggle_1');
+//   const sliderToggle2 = sliderControls.querySelector('.slider__toggle_2');
+//   const sliderToggle3 = sliderControls.querySelector('.slider__toggle_3');
+//   const sliderList = document.querySelector('.slider__list');
+//   const slide1 = sliderList.querySelector('.slide_1');
+//   const slide2 = sliderList.querySelector('.slide_2');
+//   const slide3 = sliderList.querySelector('.slide_3');
 
-  sliderToggle2.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    if(!sliderToggle2.classList.contains('slider__toggle_current')) {
-      sliderToggle2.classList.add('slider__toggle_current');
-      sliderToggle1.classList.remove('slider__toggle_current');
-      sliderToggle3.classList.remove('slider__toggle_current');
-      slide2.classList.add('slider__item_current');
-      slide1.classList.remove('slider__item_current');
-      slide3.classList.remove('slider__item_current');
-    }
-  })
+//   sliderToggle2.addEventListener('click', function(evt) {
+//     evt.preventDefault();
+//     if(!sliderToggle2.classList.contains('slider__toggle_current')) {
+//       sliderToggle2.classList.add('slider__toggle_current');
+//       sliderToggle1.classList.remove('slider__toggle_current');
+//       sliderToggle3.classList.remove('slider__toggle_current');
+//       slide2.classList.add('slider__item_current');
+//       slide1.classList.remove('slider__item_current');
+//       slide3.classList.remove('slider__item_current');
+//     }
+//   })
 
-  sliderToggle3.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    if(!sliderToggle3.classList.contains('slider__toggle_current')) {
-      sliderToggle3.classList.add('slider__toggle_current');
-      sliderToggle1.classList.remove('slider__toggle_current');
-      sliderToggle2.classList.remove('slider__toggle_current');
-      slide3.classList.add('slider__item_current');
-      slide1.classList.remove('slider__item_current');
-      slide2.classList.remove('slider__item_current');
-    }
-  })
+//   sliderToggle3.addEventListener('click', function(evt) {
+//     evt.preventDefault();
+//     if(!sliderToggle3.classList.contains('slider__toggle_current')) {
+//       sliderToggle3.classList.add('slider__toggle_current');
+//       sliderToggle1.classList.remove('slider__toggle_current');
+//       sliderToggle2.classList.remove('slider__toggle_current');
+//       slide3.classList.add('slider__item_current');
+//       slide1.classList.remove('slider__item_current');
+//       slide2.classList.remove('slider__item_current');
+//     }
+//   })
 
-  sliderToggle1.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    if(!sliderToggle1.classList.contains('slider__toggle_current')) {
-      sliderToggle1.classList.add('slider__toggle_current');
-      sliderToggle2.classList.remove('slider__toggle_current');
-      sliderToggle3.classList.remove('slider__toggle_current');
-      slide1.classList.add('slider__item_current');
-      slide2.classList.remove('slider__item_current');
-      slide3.classList.remove('slider__item_current');
-    }
-  })
+//   sliderToggle1.addEventListener('click', function(evt) {
+//     evt.preventDefault();
+//     if(!sliderToggle1.classList.contains('slider__toggle_current')) {
+//       sliderToggle1.classList.add('slider__toggle_current');
+//       sliderToggle2.classList.remove('slider__toggle_current');
+//       sliderToggle3.classList.remove('slider__toggle_current');
+//       slide1.classList.add('slider__item_current');
+//       slide2.classList.remove('slider__item_current');
+//       slide3.classList.remove('slider__item_current');
+//     }
+//   })
+// };
+
+let initSlider2 = function() {
+  let sliderBlock = document.querySelector('.slider');
+  let sliderToggles = sliderBlock.querySelectorAll('.slider__toggle');
+
+  let sliderItems = sliderBlock.querySelectorAll('.slider__item');
+  let sliderItemCurrent = sliderBlock.querySelector('.slider__item_current');
+
+
+  for (let sliderToggle of sliderToggles) {
+
+    sliderToggle.onclick = function() {
+
+      for (let i=0, length = sliderToggles.length; i < length; i++) {
+        if (sliderToggles[i].classList.contains('slider__toggle_current')) {
+          sliderToggles[i].classList.remove('slider__toggle_current');
+          // sliderItems[i].classList.remove('slider__item_current');
+        };
+      };
+
+      sliderToggle.classList.add('slider__toggle_current');
+      // sliderItems[???????].classList.add('slider__item_current');
+
+    };
+  };
+
 };
 
 let initMap = function() {
@@ -118,16 +145,18 @@ let initMap = function() {
     controls: ['zoomControl']
   }, {});
 
-  let myPlacemark = new ymaps.Placemark([59.938685, 30.323005], {}, {
+  let myPlacemark = new ymaps.Placemark([59.938784, 30.323126], {}, {
     iconLayout: 'default#image',
     iconImageHref: 'img/map-marker.png',
     iconImageSize: [231, 190],
-    iconImageOffset: [-30, -200]
+    iconImageOffset: [-50, -190] //При другом позиционировании происходит смещение маркера при масштабировании карты
   });
 
   myMap.geoObjects.add(myPlacemark);
 };
 
+
+
 ymaps.ready(initMap);
 initModal();
-initSlider();
+initSlider2();
