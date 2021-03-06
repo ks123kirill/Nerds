@@ -65,19 +65,17 @@ let initSlider = function() {
   let sliderBlock = document.querySelector('.slider');
   let sliderToggles = sliderBlock.querySelectorAll('.slider__toggle');
   let sliderItems = sliderBlock.querySelectorAll('.slider__item');
+  let currentSlide = 0;
 
   sliderToggles.forEach(function(sliderToggle, index) {
     sliderToggle.addEventListener('click', function() {
+      sliderItems[currentSlide].classList.remove('slider__item_current');
+      sliderToggles[currentSlide].classList.remove('slider__toggle_current');
 
-      for (let i=0, length = sliderToggles.length; i < length; i++) {
-        if (sliderToggles[i].classList.contains('slider__toggle_current')) {
-          sliderToggles[i].classList.remove('slider__toggle_current');
-          sliderItems[i].classList.remove('slider__item_current');
-        };
-      };
-
-      sliderToggle.classList.add('slider__toggle_current');
       sliderItems[index].classList.add('slider__item_current');
+      sliderToggle.classList.add('slider__toggle_current');
+
+      currentSlide = index;
     })
   })
 };
