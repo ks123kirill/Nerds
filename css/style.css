@@ -520,7 +520,7 @@ img {
   content: "";
   display: block;
   height: 208px;
-  width: 360px; /* без width торчит background-color по краям*/
+  width: 360px;
   background-color: var(--basic-grey);
   background-image: url("../img/logo-nerds-color.png");
   background-position: center;
@@ -596,12 +596,11 @@ img {
   align-items: center;
 }
 
-/* Код временно закомментирован. Пока не понятно, как лучше его оформить*/
-/* .customers__img {
+.customers__img {
   width: 210px;
   height: 90px;
   object-fit: scale-down;
-} */
+}
 
 .customers__item:first-of-type .customers__link {
   padding: 20px 17px 0 0px;
@@ -1000,11 +999,12 @@ img {
 
 .item-catalog__img {
   display: block;
+  width: 358px;
+  height: 578px;
   background-color: var(--special-grey-white);
   border: 1px solid var(--special-grey-white);
   border-radius: 0 0 5px 5px;
-/* временно закоментировал. Надо разобраться в его необходимости */
-  /* object-fit: contain;  */
+  object-fit: contain;
 }
 
 .item-catalog__desc {
@@ -1140,7 +1140,7 @@ img {
   box-shadow: inset 0px 3px 0px var(--special-opacity-dark);
 }
 
-                                          /* main-footer */
+                            /* main-footer */
 
 .contacts {
   display: grid;
@@ -1165,7 +1165,7 @@ img {
   background-image: url("../img/map.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-color: var(--basic-white);
+  background-color: var(--basic-grey-darken);
 }
 
 .contacts__block {
@@ -1346,9 +1346,10 @@ img {
   color: var(--special-opacity-grey);
 }
 
-.field textarea {
+.field__input_message {
   width: 760px;
   height: 118px;
+  resize: none;
 }
 
 .field__input:hover {
@@ -1447,4 +1448,3 @@ img {
     transform: translateX(10px);
   }
 }
-

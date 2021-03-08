@@ -85,16 +85,16 @@ let initMap = function() {
   let ContactsMap = document.querySelector('.contacts__map');
 
   let myMap = new ymaps.Map(ContactsMap, {
-    center: [59.939121, 30.321611],
+    center: [59.939097, 30.321520],
     zoom: 17,
     controls: ['zoomControl']
   }, {});
 
-  let myPlacemark = new ymaps.Placemark([59.938784, 30.323126], {}, {
+  let myPlacemark = new ymaps.Placemark([59.938748, 30.323161], {}, {
     iconLayout: 'default#image',
     iconImageHref: 'img/map-marker.png',
     iconImageSize: [231, 190],
-    iconImageOffset: [-50, -190] //При другом позиционировании происходит смещение маркера при масштабировании карты
+    iconImageOffset: [-50, -190]
   });
 
   myMap.geoObjects.add(myPlacemark);
