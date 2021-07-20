@@ -1,4 +1,4 @@
-# Проект «Нёрдс» от HTML Academy
+# Проект «Нёрдс» от [HTML Academy](https://htmlacademy.ru/)
 ---
 * Верстка: [Кирилл Скорописцев](https://htmlacademy.ru/profile/id1530953)
 * Наставник: [Виталя Игошин](https://htmlacademy.ru/profile/id353627)
@@ -8,7 +8,7 @@
 
 ### Структура проекта
 
-```
+```bash
 .
 ├── css/                  # каталог файлов стилей
 ├── fonts/                # каталог шрифтов
