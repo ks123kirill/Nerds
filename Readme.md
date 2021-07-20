@@ -18,7 +18,6 @@
 ├── .editorconfig         # файл конфигурации настроек редактора
 ├── .gitattributes        # файл атрибутов Git
 ├── .gitignore            # файл исключений Git
-├── Contributing.md       # файл рекомендаций
 ├── README.md             # документация проекта
 ├── catalog.html          # файл разметки страницы
 ├── favicon.ico           # файл фавиконка
