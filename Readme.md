@@ -1,4 +1,4 @@
-# Проект «Нёрдс» от [HTML Academy](https://htmlacademy.ru/)
+# Учебный проект «Нёрдс» от [HTML Academy](https://htmlacademy.ru/)
 
 * Верстка: [Кирилл Скорописцев](https://htmlacademy.ru/profile/id1530953)
 * Наставник: [Виталя Игошин](https://htmlacademy.ru/profile/id353627)
@@ -31,6 +31,7 @@
 ├── .gitattributes        # файл атрибутов Git
 ├── .gitignore            # файл исключений Git
 ├── Readme.md             # документация проекта
+├── Specification.md      # техническое задание
 ├── catalog.html          # файл разметки страницы каталога
 ├── favicon.ico           # файл фавиконка
 ├── index.html            # файл разметки главной страницы
